@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio Prueba</title>
+    <link rel="icon" href="./styles/assets/images/fenix.jpg"/>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <header>
+        <h1 id="title">MI PORTAFOLIO</h1>
+        <nav class="nav-bar">
+            <ul class="nav-bar-list" >
+                <li class="nav-bar-list-option"><a class="nav-bar-list-option-link" href="#tecnologias">Tecnologias</a></li>
+                <li class="nav-bar-list-option"><a class="nav-bar-list-option-link" href="#actividades">Actividades</a></li>
+                <li class="nav-bar-list-option"><a class="nav-bar-list-option-link" href="#redes">Redes</a></li>
+            </ul>
+        </nav>
+        <div class="saludo">
+            <p class="saludo-texto">Hola un gusto que estes aca, me presento mi nombre es <b class="saludo-texto-nombre">Juan Pablo Rueda Zuluaga</b> estoy cursando el bootcamp de soyHenry para poder convertirme en un FullStack Developer.</p>
+            <img src="./styles/assets/images/hacker.gif" class="saludo-img">
+        </div>
+       
+    </header>
+    <section id="tecnologias">
+        <h2 id="tecnologias-title">Mis Tecnologias</h2>     
+        <article>
+            <div class="tecnologia" id="html">
+                <h3>HTML</h3>
+                <img src="./styles/assets/images/html-5.png">
+            </div>
+        </article>
+        <article>
+            <div class="tecnologia" id="css">
+                <h3>CSS</h3>
+                <img src="./styles/assets/images/css-3.png">
+            </div>
+        </article>
+        <article>
+            <div class="tecnologia" id="js">
+                <h3>JavaScript</h3>
+                <img src="./styles/assets/images/js.png">
+            </div>
+        </article>
+        <article>
+            <div class="tecnologia" id="mongodb">
+                <h3>MongoDB</h3>
+                <img src="./styles/assets/images/mongodb.png">
+            </div>
+        </article>
+        <article>
+            <div class="tecnologia" id="nodejs">
+                <h3>NodeJs</h3>
+                <img src="./styles/assets/images/nodejs.png">
+            </div>
+        </article>
+    </section>
+    <section id="actividades">
+        <h2 id="actividades-title">Mis Actividades</h2>
+       <form>
+        <div>
+            <label for="actividad">Actividad<input type="text" placeholder='Que cosas te gustan hacer?' id="actividad"></label>
+        </div>
+        <div>
+            <label for="descripcion">Descripcion<textarea id="descripcion" name="descripcion" rows="2" placeholder="Cuentanos de tu actividad"></textarea></label>
+        </div>
+        <div>
+            <label for="imagen">Link de la imagen<input type="url" placeholder='Pega el link de la imagen' id="imagen"></label>
+        </div>
+        <div class="botones">
+            <button id="add-img" type="submit" value="add">Agregar</button>
+            <button id="del-img" type="submit" value="add">Borrar</button>
+        </div>
+       </form>
+    </section>
+        <span id="recolector"></span>
+    <footer class="redes" id="redes">
+        <h2 class="redes-titulo">Redes</h2>
+        <p class="redes-parrafo">Estas son mis redes por si queres seguirme y darme like para apoyarme 👍</p>
+
+        <div class="red-social" id="github">
+            <img src="./styles/assets/images/github.png" class="red-social-img">
+            <a href="https://github.com/JPRuedaZ" class="red-social-link">GitHub</a>
+        </div>
+        <div class="red-social" id="instagram">
+            <img src="./styles/assets/images/instagram.png" class="red-social-img">
+            <a href="https://www.instagram.com/paporz/" class="red-social-link">Instagram</a>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </footer>
 </body>
 </html>

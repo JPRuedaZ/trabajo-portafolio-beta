@@ -1,0 +1,249 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  #title {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+      margin-top: 50px;
+      transition: color 0.3s ease-in-out;
+  }
+  
+  #title:hover {
+    color: goldenrod; /* Cambia a un color diferente al pasar el ratón */
+      cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  }
+  
+  .nav-bar {
+      border: 5px solid whitesmoke;
+      margin-bottom: 15px;
+  }
+  
+  
+  .nav-bar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-bar-list-option {
+    margin: 0 15px;
+  }
+  
+  .nav-bar-list-option-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-bar-list-option-link:hover {
+    color: lightseagreen;
+  }
+  
+  .saludo {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .saludo-texto {
+    font-size: 1.2em;
+  }
+  
+  .saludo-texto-nombre {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .saludo-texto-nombre:hover {
+    color: yellow; /* Cambia a un color diferente al pasar el ratón */
+    cursor: pointer;
+  }
+  
+  .saludo-img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 50%; 
+  }
+  
+  /* styles.css */
+  
+  /* ... (códigos anteriores) ... */
+  
+  #tecnologias {
+    background-color: #f8f8f8;
+    padding: 30px;
+    animation: fadeInUp 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #tecnologias-title {
+    margin-left: 10px;
+    margin-right: 100px;
+    font-size: 2em;
+    color: #333;
+  }
+  .tecnologia {
+    width: 80%;
+    text-align:center;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tecnologia:hover {
+    transform: scale(1.05);
+    background-color: lightcyan;
+    cursor: pointer;
+    border-color: lightseagreen;
+  }
+  
+  #actividades {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  #actividades-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  label,
+  input[type="text"],
+  textarea,
+  input[type="url"],
+  button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="url"] {
+    height: 40px;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus,
+  input[type="url"]:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #add-img {
+    margin-right: 10px;
+  }
+  
+  
+  .redes {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .redes-titulo {
+      margin-bottom: 5px;
+      font-size: 2em;
+    color: whitesmoke;
+  }
+  
+  .redes-parrafo {
+      margin-bottom: 5px;
+  }
+  
+  /* Estilos específicos para las redes sociales */
+  .red-social {
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+  }
+  
+  .red-social-img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .red-social-img:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+  }
+  
+  .red-social-link {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Animación de fadeIn */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
