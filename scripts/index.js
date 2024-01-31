@@ -1,34 +1,35 @@
-
-// Aca se crea la clase de las actividades que se van a crear y se van a ver reflejadas en la pagina..
+// Esta clase Activity sirve como un "molde" para crear objetos de actividad. Cuando se crea una nueva instancia de Activity, se espera que se le pase un objeto act con propiedades como id, actividad, descripcion, y url. La instancia de Activity entonces tiene estas propiedades y puede utilizarse para representar y manipular información sobre una actividad específica.
 class Activity {
-    constructor(id,actividad,descripcion,url) {
-        this.id = id;
-        this.actividad = actividad;
-        this.descripcion = descripcion;
-        this.url = url;
+    constructor(act) {
+        console.log(act.id)
+        this.id = act.id;
+        this.actividad = act.actividad;
+        this.descripcion = act.descripcion;
+        this.url = act.url;
     }
 }
 
-//Aca se crea la clase que va a almacenar lo que envie se le pase al formulario.
+//En resumen, la clase Contenedor permite gestionar un conjunto de actividades. Puedes agregar actividades, obtener la lista de todas las actividades almacenadas y eliminar actividades según su id. La clase trabaja en conjunto con la clase Activity para representar y manipular información sobre actividades.
 class Contenedor {
-    //Este recibe una propiedad llamada actividades que recibe un arreglo vacio que va a recibir las actividades que se pasen en el formulario.
+    //El constructor de la clase inicializa las propiedades actividades e id. actividades es un array vacío que se utilizará para almacenar instancias de la clase Activity. id se inicializa en 0 y se utiliza para asignar identificadores únicos a cada actividad.
     constructor () {
         this.actividades = [];
+        this.id = 0;
     }
-    //este nos va a reflejar todas las actividades que se vayan almacenando
+    // Este método devuelve el array actividades, que contiene todas las instancias de actividades almacenadas en el contenedor.
     getAllActivities () {
     return this.actividades
     }
-    //Este nos crea una instancia de la nueva actividad con sus datos y se almacena en el arreglo de actividades y muestra la actividad que se creo.
-    createActivity (id,nombre,descripcion,url) {
-    const nuevaActividad = new Activity(id,nombre, descripcion, url);
-    this.actividades.push(nuevaActividad);
-    return nuevaActividad;
+    //Este método crea una nueva instancia de Activity utilizando el objeto activ proporcionado como argumento. Se incrementa el id en 1 para asignar un identificador único a la nueva actividad. La actividad se agrega al array actividades.
+    createActivity (activ) {
+        this.id++;
+        const activity = new Activity ({id: this.id, ...activ})
+    this.actividades.push(activity);
     }
 
-    //Esta elimina las actividades que se filtren de acuerdo a su id.
+    //Este método elimina una actividad del array actividades según el id proporcionado. Utiliza el método filter para crear un nuevo array que excluye la actividad con el id dado.
     deleteActivity (id) {
-        this.actividades =this.actividades.filter((actividad)  => actividad.id !== id) 
+        this.actividades =this.actividades.filter((act)  => act.id !== id) 
     }
 
 }
@@ -36,9 +37,14 @@ class Contenedor {
 //PRUEBAS
 const contenedor = new Contenedor ();
 
-const actividad1 = contenedor.createActivity(1,'Ciclsimo','Salimos en bici hasta Dapa','https//www.ciclas.com')
+const actividad0 = {actividad:'Ciclsimo',descripcion:'Salimos en bici hasta Dapa',url:'https//www.ciclas.com'}
+const actividad1 = {actividad:'Natacion',descripcion:'Nado en pisicina semiolimpica ',url:'https//www.barracudas.com'}
 
-const actividad2 = contenedor.createActivity(2,'Natacion','Nado en pisicina semiolimpica ','https//www.barracudas.com')
+
+
+contenedor.createActivity(actividad0)
+contenedor.createActivity(actividad1)
+
 
 console.log(contenedor.getAllActivities())
 
@@ -46,8 +52,12 @@ contenedor.deleteActivity(2);
 
 console.log(contenedor.getAllActivities())
 
-contenedor.createActivity(3,'Futbol','Amo jugar futbol todos los dias a las 6pm','https//www.locosporverlarodar.com')
+const actividad2 = {actividad:'Futbol',descripcion:'Amo jugar futbol todos los dias a las 6pm',url:'https//www.locosporverlarodar.com'}
 
-console.log(contenedor.nuevaActividad) //aca se accede a la ultima actividad creada.
+contenedor.createActivity(actividad2)
+
+console.log(contenedor.getAllActivities()) 
+
+console.log(contenedor);
 
 
