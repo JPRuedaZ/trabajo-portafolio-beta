@@ -59,23 +59,23 @@
     </section>
     <section id="actividades">
         <h2 id="actividades-title">Mis Actividades</h2>
-       <form>
+       <form id="mis-actividades">
         <div>
-            <label for="actividad">Actividad<input type="text" placeholder='Que cosas te gustan hacer?' id="actividad"></label>
+            <label for="actividad">Actividad<input type="text" placeholder='Que cosas te gustan hacer?' id="actividad"  name="actividad"></label>
         </div>
         <div>
-            <label for="descripcion">Descripcion<textarea id="descripcion" name="descripcion" rows="2" placeholder="Cuentanos de tu actividad"></textarea></label>
+            <label for="descripcion">Descripcion<textarea id="descripcion" value="descripcion" rows="2" placeholder="Cuentanos de tu actividad" name="descripcion"></textarea></label>
         </div>
         <div>
-            <label for="imagen">Link de la imagen<input type="url" placeholder='Pega el link de la imagen' id="imagen"></label>
+            <label for="imagen">Link de la imagen<input type="url" placeholder='Pega el link de la imagen' id="imagen" name="imagen"></label>
         </div>
         <div class="botones">
-            <button id="add-img" type="submit" value="add">Agregar</button>
-            <button id="del-img" type="submit" value="add">Borrar</button>
+            <button id="add-img" type="button" value="add">Agregar</button>
+            <button id="del-img" type="button" value="add">Borrar</button>
         </div>
        </form>
     </section>
-        <span id="recolector"></span>
+        <div id="recolector"></div>
     <footer class="redes" id="redes">
         <h2 class="redes-titulo">Redes</h2>
         <p class="redes-parrafo">Estas son mis redes por si queres seguirme y darme like para apoyarme 👍</p>
