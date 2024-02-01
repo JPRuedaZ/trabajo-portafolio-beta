@@ -37,7 +37,7 @@ const repositorio = new Contenedor();
 
 //Esta funcion toma la instancia activity y lo convierte a HTML para que el DOM pueda leerlo y reflejarlo
 function convertirHTML(activity) {
-
+// aca es que se destructura el objeto recibido por parametro (activity)
   let { id, actividad, descripcion, url } = activity;
   const actividadInput = document.createElement("h3");
   actividadInput.classList.add('actv')
