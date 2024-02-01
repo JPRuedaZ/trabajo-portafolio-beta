@@ -65,7 +65,7 @@ function mostrarActividades () {
     //Aca lo vacia primero
     const recolector = document.getElementById('recolector');
     recolector.innerHTML = '';
-    //Muestra todas las actividades
+    //Muestra todas las actividades llamando el repositorio y su respectivo metodo
     const lista = repositorio.getAllActivities();
     //Aca obtiene todas las actividades pero en un array y como el DOM no las puede leer entonces llama la funcion convertir para pasarlo a HTML y tener un array de elementos de HTML 
     const mapeo = lista.map((actividad) => {return convertirHTML(actividad)})
