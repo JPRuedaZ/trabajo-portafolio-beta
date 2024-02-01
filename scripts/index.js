@@ -37,7 +37,7 @@ const repositorio = new Contenedor();
 
 //Esta funcion toma la instancia activity y lo convierte a HTML para que el DOM pueda leerlo y reflejarlo
 function convertirHTML(activity) {
-// aca es que se destructura el objeto recibido por parametro (activity)
+// aca es que se destructura el objeto recibido por parametro (activity) como instancia.
   let { id, actividad, descripcion, url } = activity;
   const actividadInput = document.createElement("h3");
   actividadInput.classList.add('actv')
@@ -83,18 +83,20 @@ function handler () {
     const formulario = document.getElementById('mis-actividades');
     //un condicional para validar que no coloquen datos vacios 
     if (
-        selectAct.value !== "" &&
-        selectDescrip.value !== "" &&
-        selectImg.value !== ""
+        selectAct !== "" &&
+        selectDescrip !== "" &&
+        selectImg !== ""
       ) {
         //aca el boton va a estar habilitado 
         buttonAgrega.disable = false;
         //aca el repositorio (la plantilla) va a recibir el objeto como parametro({}) =>(cada propiedad proveniente de el valor de cada input almacenado en las variables declaradas) como esta en el metodo de la plantilla.
         repositorio.createActivity({actividad: selectAct, descripcion: selectDescrip, url: selectImg})
+        //Aca actualizo la pantalla y muestro las actividades que tenemos en el contenedor.
         mostrarActividades()
         //cuando se cree la actividad se reinicia el formulario.
         formulario.reset();
       } else {
+        //si no cumple la validacion de rellenar todos los campos le retorna el alert.
         buttonAgrega.disable = true;
         return alert("Debes diligenciar todos los datos");
       }
