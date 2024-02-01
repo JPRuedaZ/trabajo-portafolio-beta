@@ -1,4 +1,4 @@
-// Esta clase Activity sirve como un "molde" para crear objetos de actividad. Cuando se crea una nueva instancia de Activity, se espera que se le pase un objeto act con propiedades como id, actividad, descripcion, y url. La instancia de Activity entonces tiene estas propiedades y puede utilizarse para representar y manipular información sobre una actividad específica.
+// Esta clase Activity sirve como un "molde" para crear objetos de actividad. Cuando se crea una nueva instancia de Activity, se espera que se le pase un objeto destructurado por propiedades como id, actividad, descripcion, y url. La instancia de Activity entonces tiene estas propiedades y puede utilizarse para representar y manipular información sobre una actividad específica.
 class Activity {
   constructor({id, actividad, descripcion, url}) {
     this.id = id;
@@ -62,7 +62,7 @@ function convertirHTML(activity) {
 
 //Esta funcion refleja las actividades que estan en el contenedor
 function mostrarActividades () {
-    //Aca lo vacia primero
+    //Aca selecciona el recolector pq es donde lo va a mostrar en el HTML y luego lo vacia.
     const recolector = document.getElementById('recolector');
     recolector.innerHTML = '';
     //Muestra todas las actividades llamando el repositorio y su respectivo metodo
